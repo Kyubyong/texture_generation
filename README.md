@@ -13,11 +13,11 @@ Can we generate images that are similar to the real texture images using neural 
 If two images are similar, their feature maps should be similar, and vice versa. Accordingly, first, we train discriminative networks such that they can correctly classify different classes of texture images. Then, we train generative networks such that the feature maps of the input image become similar with those of its target true image.
 
 ## Dataset
-Refere to [Kylberg Texture Dataset](http://www.cb.uu.se/~gustaf/texture/)
+Refer to [Kylberg Texture Dataset](http://www.cb.uu.se/~gustaf/texture/)
 
 ## Model Architecture and Objective Function
 
-Model: VGG-19, replacing the original final dense layers with a convolutional layer.
+Model: VGG-19, replacing the original final dense layers with a convolutional layer.<br/>
 Objective function: Sum of L2 losses between the gram matrix of the feature maps of the noise and the target image.
 
 ## Folder and file instructions
@@ -29,17 +29,24 @@ Objective function: Sum of L2 losses between the gram matrix of the feature maps
   * gen.py: Generating. This should generate an image for the given target image to `gen_images` folder. Put the path of the target image as an argument.
 	    We generated 28 images, targeting the first image of each class. Here is the simple bash script.
 
+```
 #!/bin/bash
 for entry in ../datasets/Kylberg\ Texture\ Dataset\ v.\ 1.0/without-rotations-zip/*/*-a-p001.png
 do
   python gen.py "$entry"
 done
+```
 
 ## Results
 
-Classification acc. = 2485/2280 = 0.96
+Classification acc. = 4285/4480 = 0.96<br/>
+
 Here are the generated images.
 
+![collection_0](image_collection/collection_0.png?raw=true)
+![collection_1](image_collection/collection_1.png?raw=true)
+![collection_2](image_collection/collection_2.png?raw=true)
+![collection_3](image_collection/collection_3.png?raw=true)
 
 
 
