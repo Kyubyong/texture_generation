@@ -1,4 +1,4 @@
-# An Implemetation of 'Texture Synthesis Using Convolutional Neural Networks'
+# An Implementation of 'Texture Synthesis Using Convolutional Neural Networks'
 This project is desgined to synthesize 28 texture classes of the [Kylberg Texture Dataset](http://www.cb.uu.se/~gustaf/texture/), based on the ideas of Gatys et al.'s paper [Texture Synthesis Using Convolutional Neural Networks](https://arxiv.org/pdf/1505.07376v3.pdf). 
 
 ## Requirements
